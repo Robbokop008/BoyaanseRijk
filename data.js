@@ -1,24 +1,18 @@
-/*
-  Alle inhoud van de site staat in dit bestand.
-  Na elk hoofdstuk vul je hier aan wat de spelers al weten. Zie README.md.
-  Let op: alles wat hier staat, kan iedereen lezen (ook in de broncode).
-  Zet hier dus nooit iets wat nog niet gebeurd is.
-*/
 window.RIJK = {
   server: {
     adres: "boyaanserijk.exaroton.me",
     versie: "Java Edition",
-    discord: ""            // bv. "https://discord.gg/..." (leeg laten = geen knop)
+    discord: ""            // bv. "https://discord.gg/..."
   },
 
-  // De trailer bovenaan de site (leeg laten = geen trailer)
+  // De trailer bovenaan de site
   trailer: "trailer.mp4",
   trailerPoster: "trailer-poster.jpg",
 
-  // Link naar de Doodle om de startdatum te kiezen (leeg laten = geen knop)
+  // Link naar de Doodle om de startdatum te kiezen
   peiling: "",
 
-  // Hoeveel tandwielen hangen er al in de klok (0 tot 7)
+  // Hoeveel tandwielen hangen er al in de klok
   tandwielen: 0,
 
   // Huidige stand. hoofdstuk 0 = het verhaal is nog niet begonnen.
@@ -28,7 +22,7 @@ window.RIJK = {
     tekst: "Onder de lichttoren is het stil. Voorlopig."
   },
 
-  // Gidstekst voor spelers (link naar het volledige document, mag leeg blijven)
+  // Gidstekst voor spelers
   gids: "",
 
   // Afgeronde of lopende hoofdstukken, in volgorde.
