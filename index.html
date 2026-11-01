@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Het Boyaanse Rijk</title>
+  <meta name="description" content="Het verhaal, het archief en alles wat je moet weten over de Minecraft-server van het Boyaanse Rijk.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23132a38' stroke='%23c9a24a' stroke-width='2'/%3E%3Cpath d='M16 16V7M16 16l6 3' stroke='%23c9a24a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip" href="#inhoud">Naar de inhoud</a>
+
+  <header class="hero">
+    <div class="straal" aria-hidden="true"></div>
+    <div class="hero-in">
+      <svg class="klok" id="klok" viewBox="0 0 400 400" role="img" aria-labelledby="klok-titel">
+        <title id="klok-titel">De grote klok van de lichttoren</title>
+      </svg>
+      <div class="hero-tekst">
+        <h1>Het Boyaanse Rijk</h1>
+        <p class="stand" id="stand"></p>
+        <p class="stand-tekst" id="stand-tekst"></p>
+        <div class="adres">
+          <span>Server</span>
+          <code id="adres"></code>
+          <button type="button" id="kopieer">Kopieer adres</button>
+        </div>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Onderdelen">
+      <a href="#verhaal">Het verhaal</a>
+      <a href="#archief">Het archief</a>
+      <a href="#personages">Wie we kennen</a>
+      <a href="#meespelen">Meespelen</a>
+      <a href="#rijk">Het rijk</a>
+      <a href="#boekje">Mijn notities</a>
+    </nav>
+  </header>
+
+  <main id="inhoud">
+
+    <section id="trailer" class="blad trailer" hidden>
+      <h2>De trailer</h2>
+      <video id="trailer-video" controls playsinline preload="metadata"></video>
+      <p class="peiling" id="peiling" hidden></p>
+    </section>
+
+    <section id="verhaal" class="blad">
+      <h2>Het verhaal</h2>
+      <p class="intro">Wat er tot nu toe gebeurde, hoofdstuk per hoofdstuk. Wie een week miste, leest hier bij.</p>
+      <ol class="tijdlijn" id="tijdlijn"></ol>
+      <div class="baron-zegt" id="baron-zegt" hidden>
+        <h3>Wat zei hij ook alweer?</h3>
+        <blockquote id="uitspraak"></blockquote>
+        <button type="button" id="nog-een">Een andere uitspraak</button>
+      </div>
+    </section>
+
+    <section id="archief" class="blad">
+      <h2>Het Rijksarchief</h2>
+      <p class="intro">Documenten die spelers in de toren hebben ingeleverd. Lees ze goed. Niet alles wat op papier staat, is waar.</p>
+      <div class="archief" id="archief-lijst"></div>
+    </section>
+
+    <section id="personages" class="blad">
+      <h2>Wie we kennen</h2>
+      <p class="intro">Alleen wat het rijk zeker weet. De rest moet je zelf uitzoeken.</p>
+      <div class="personen" id="personen"></div>
+    </section>
+
+    <section id="meespelen" class="blad">
+      <h2>Meespelen</h2>
+      <div class="gouden">
+        <h3>De gouden regel</h3>
+        <p>In dit verhaal staat niets er zomaar. Elk woord, elk blok en elke beweging kan een aanwijzing zijn: een zin die halverwege stopt, een steen die net anders is, een personage dat plots stilvalt.</p>
+      </div>
+      <h3>Zo verloopt een hoofdstuk</h3>
+      <ol class="stappen">
+        <li><strong>Het decreet.</strong> De keizer kondigt aan dat er iets gebeurt.</li>
+        <li><strong>De scène.</strong> Een personage spreekt tot iedereen die online is. Hier zit de eerste aanwijzing.</li>
+        <li><strong>Het zoeken.</strong> Een opdracht, een raadsel of een richting.</li>
+        <li><strong>De vondst.</strong> Wie het doel vindt, brengt het naar de keizer.</li>
+        <li><strong>De afsluiting.</strong> De keizer rondt af, en dan volgt een cliffhanger.</li>
+      </ol>
+      <h3>Commando's</h3>
+      <table class="tabel">
+        <thead><tr><th scope="col">Commando</th><th scope="col">Wat het doet</th></tr></thead>
+        <tbody>
+          <tr><td><code>/verhaal</code></td><td>Hoofdstuk, laatste hint, jouw punten en de top 5</td></tr>
+          <tr><td><code>/verhaal log</code></td><td>Nalezen wat er in een hoofdstuk gezegd werd</td></tr>
+          <tr><td><code>/lees</code></td><td>Het document in je hand lezen</td></tr>
+          <tr><td><code>/archief</code></td><td>Wat er in het Rijksarchief ligt</td></tr>
+          <tr><td>Rechtsklik</td><td>Praten met een personage</td></tr>
+          <tr><td><code>/hulp</code></td><td>Alle andere commando's van de server</td></tr>
+        </tbody>
+      </table>
+      <p class="gids" id="gids"></p>
+    </section>
+
+    <section id="rijk" class="blad">
+      <h2>Het rijk</h2>
+      <div class="twee">
+        <div>
+          <h3>De rangen</h3>
+          <ul class="rangen" id="rangen"></ul>
+        </div>
+        <div>
+          <h3>Het wetboek</h3>
+          <ol class="wetten" id="wetten"></ol>
+        </div>
+      </div>
+      <h3>Hof van eer</h3>
+      <ul class="eer" id="eer"></ul>
+    </section>
+
+    <section id="boekje" class="blad">
+      <h2>Mijn notities</h2>
+      <p class="intro">Een speurdersboekje. Wat je hier schrijft, blijft alleen op dit toestel, in deze browser.</p>
+      <textarea id="notities" rows="10" aria-label="Jouw notities" placeholder="Wat viel je op? Een naam, een datum, een vreemde steen..."></textarea>
+      <p class="bewaard" id="bewaard" aria-live="polite"></p>
+    </section>
+
+  </main>
+
+  <footer class="voet">
+    <p>Het Boyaanse Rijk. Een Minecraft-server onder vrienden.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
