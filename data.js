@@ -37,7 +37,7 @@ window.RIJK = {
         "Het eerste tandwiel werd teruggevonden en door de keizer plechtig in de klok geplaatst. Zes zijn er nog zoek."
       ],
       uitspraak: "Diefstal, zeggen ze? Hm. Nou ja. Laten we het daarop houden.",
-      vinder: "NAAM",
+      vinder: "Superbol_XL",
       documenten: ["B1"]
     }
   ],
