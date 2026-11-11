@@ -74,7 +74,7 @@ window.RIJK = {
   // De wetten van het rijk (zoals in /wetten)
   wetten: [
     "Het volledige wetboek lees je in het spel met /wetten.",
-    "Elke wet geldt voor iedereen, altijd. Twijfel je? Vraag het eerst aan de keizer."
+    "Elke wet geldt voor iedereen, altijd. Twijfel je? Vraag het eerst aan de keizer.",
     "Een overtreding gezien? Meld ze met /aanklacht <speler> <reden>. De keizer spreekt het vonnis."
   ],
 
