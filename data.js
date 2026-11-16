@@ -123,7 +123,8 @@ window.RIJK = {
   eer: [
     { naam: "Superbol_XL", ereteken: "Tandwielvinder", hoofdstuk: 1 },
     { naam: "DrDynam1t3", ereteken: "Speurneus", hoofdstuk: 1 },
-    { naam: "Kabroen", ereteken: "Tandwielvinder", hoofdstuk: 2 }
+    { naam: "Kabroen", ereteken: "Tandwielvinder", hoofdstuk: 2 },
+    { naam: "HaxlBrustem1", ereteken: "Speurneus", hoofdstuk: 2 },
   ],
 
   // De wetten van het rijk (zoals in /wetten)
